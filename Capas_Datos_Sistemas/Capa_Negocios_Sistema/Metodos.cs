@@ -34,13 +34,14 @@ namespace Capa_Negocios_Sistema
                 Conectando_Base_Datos();
                 conexion.Open();
                 DataSet agregar = new DataSet();
-                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter("SELECT codigo , nombre, edad, fecha FROM producto", conexion);
+                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter("SELECT codigo , nombre, cantidad, proveedor, fecha_registro FROM producto", conexion);
                 adapter.Fill(agregar, "producto");
                 agregar_datos.DataSource = agregar.Tables[0];
-                agregar_datos.Columns[0].HeaderCell.Value = "cedula";
+                agregar_datos.Columns[0].HeaderCell.Value = "codigo";
                 agregar_datos.Columns[1].HeaderCell.Value = "nombre";
-                agregar_datos.Columns[2].HeaderCell.Value = "edad";
-                agregar_datos.Columns[3].HeaderCell.Value = "fecha";
+                agregar_datos.Columns[2].HeaderCell.Value = "cantidad";
+                agregar_datos.Columns[3].HeaderCell.Value = "proveedor";
+                agregar_datos.Columns[4].HeaderCell.Value = " fecha_registro";
                 conexion.Close();
         
 

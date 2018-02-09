@@ -34,7 +34,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtProducto = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtProveedor = new System.Windows.Forms.TextBox();
@@ -106,12 +106,12 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Fecha Registro:";
             // 
-            // txtProducto
+            // txtCodigo
             // 
-            this.txtProducto.Location = new System.Drawing.Point(283, 148);
-            this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(130, 20);
-            this.txtProducto.TabIndex = 6;
+            this.txtCodigo.Location = new System.Drawing.Point(283, 148);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(130, 20);
+            this.txtCodigo.TabIndex = 6;
             // 
             // txtNombre
             // 
@@ -151,6 +151,7 @@
             this.btnAgregar.TabIndex = 11;
             this.btnAgregar.Text = "Agregar al Sistema";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // Tabla_Productos
             // 
@@ -184,7 +185,7 @@
             this.Controls.Add(this.txtProveedor);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtProducto);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -193,6 +194,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Sistema Ventas";
+            this.Load += new System.EventHandler(this.ventana_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Tabla_Productos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -207,7 +209,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtProducto;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.TextBox txtProveedor;
